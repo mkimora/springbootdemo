@@ -12,9 +12,9 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping("/getAllUsers")
-    private void getAllUsers() {
-        System.out.println("tous les users");
+    @GetMapping
+    private List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
     //Get - Get all the users
